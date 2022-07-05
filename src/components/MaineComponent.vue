@@ -8,13 +8,13 @@ export default {
   // domysle dane deklarowane na poczatku
   data() {
     return {
-      localeInfo: 'sam',
+      localeInfo: 'San Escobar',
     };
   },
   // mounted - funkcja wywołująca się po " zamontowaniu komponentu"
   mounted() {
     console.log('hello');
-    console.log('');
+    console.log('this');
     this.localeInfo = 'San Escobar';
   },
 };
