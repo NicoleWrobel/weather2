@@ -1,21 +1,26 @@
 <template>
   <h1>WeatherApp</h1>
-  <input type="text" placeholder="wpisz lokalizacje" v-model="localeInfo" />
+  <input type="text" placeholder="Wpisz lokalizację" v-model="localeInfo" />
 </template>
 
 <script>
 export default {
-  // domysle dane deklarowane na poczatku
+  // "domyślne" dane - te ładowane na początku
   data() {
     return {
-      localeInfo: 'San Escobar',
+      localeInfo: 'Chicago', // domyślna lokalizacja
     };
   },
-  // mounted - funkcja wywołująca się po " zamontowaniu komponentu"
+  // "sprawdzaj / patrz" element, którego nazwa jest nazwą funkji
+  watch: {
+    // patrz na zmienną localInfo
+    localeInfo(newVal) {
+      console.log('newData: ', newVal);
+    },
+  },
+  // mouted - funkcja wywołująca się po "zamontowaniu komponentu"
   mounted() {
-    console.log('hello');
-    console.log('this');
-    this.localeInfo = 'San Escobar';
+    // console.log('hello');
   },
 };
 </script>
